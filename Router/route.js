@@ -31,7 +31,7 @@ router.get('/project/all-user-projects',jwtMiddleware,projectController.getUserP
 router.get('/project/all-projects',jwtMiddleware,projectController.getAllProjects)
 
 //get all projects routes- localhost:400/projects/all-projects
-router.get('/project/home-projects',jwtMiddleware,projectController.getHomeProject)
+router.get('/project/home-projects',projectController.getHomeProject)
 
 //update project routes- localhost:4000/projects/update-project/7664443222678890
 router.put('/project/update-project/:id',jwtMiddleware,multerConfig.single('projectImage'),projectController.editProject)
